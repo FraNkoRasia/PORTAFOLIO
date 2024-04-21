@@ -48,7 +48,9 @@ https://en.bem.info/methodology/quick-start/*/
     padding: 0 8%;
     background-color: #f0f4f5;
 }
-
+.menu__title{
+    font-size: 30px;
+}
 section.menu {
     display: flex;
     align-items: stretch;
