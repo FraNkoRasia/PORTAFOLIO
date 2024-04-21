@@ -169,12 +169,13 @@ ul.title__network {
 }
 
 /*Formación Académica*/
-.formacionAcademicaTitulo{
-    
+.formacionAcademicaTitulo {
+
     text-align: center;
-    font-size: 35px ;
+    font-size: 35px;
     font-weight: bold;
 }
+
 .academic__courses {
     background-color: #e0eefd;
     border-radius: 10px;
@@ -230,17 +231,19 @@ ul.title__network {
 
 
 /*Experiencia Profesional*/
-.experienciaProfecionalTitulo{
- 
+.experienciaProfecionalTitulo {
+
     text-align: center;
-    font-size: 35px ;
+    font-size: 35px;
     font-weight: bold;
 }
+
 .experience__info {
-    margin: 2% ;
-  
+    margin: 2%;
+
 }
-.experience__description{
+
+.experience__description {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -260,21 +263,29 @@ ul.title__network {
 
 .experiencie__box {
     display: flex;
-    align-items: center; /* Alinear verticalmente los elementos */
-    margin-bottom: 20px; /* Espacio entre cada experiencia */
+    align-items: center;
+    /* Alinear verticalmente los elementos */
+    margin-bottom: 20px;
+    /* Espacio entre cada experiencia */
     flex-direction: row-reverse;
 }
+
 .experiencie__box1 {
     display: flex;
-    align-items: center; /* Alinear verticalmente los elementos */
-    margin-bottom: 20px; /* Espacio entre cada experiencia */
+    align-items: center;
+    /* Alinear verticalmente los elementos */
+    margin-bottom: 20px;
+    /* Espacio entre cada experiencia */
     flex-direction: row;
 }
 
 .experience__img {
-    width: 60%; /* Ajusta el tamaño según lo necesites */
-    height: auto; /* Ajusta el tamaño según lo necesites */
-    margin-left: 20px; /* Espacio entre la imagen y el texto */
+    width: 60%;
+    /* Ajusta el tamaño según lo necesites */
+    height: auto;
+    /* Ajusta el tamaño según lo necesites */
+    margin-left: 20px;
+    /* Espacio entre la imagen y el texto */
 }
 
 .experience__img {
@@ -299,7 +310,8 @@ ul.title__network {
     font-size: 16px;
     transition: transform 0.4s ease;
 }
-.boton_repositorio:hover{
+
+.boton_repositorio:hover {
     transform: scale(1.1);
 }
 
@@ -314,9 +326,11 @@ ul.title__network {
     font-size: 16px;
     transition: transform 0.4s ease;
 }
-.boton_demo:hover{
+
+.boton_demo:hover {
     transform: scale(1.1);
 }
+
 /*Contacto*/
 
 .formcontato__form {
@@ -383,7 +397,7 @@ footer {
     padding: 5px;
     margin-top: 50px;
     text-align: center;
-    background: linear-gradient(rgba(242, 244, 246, 0.7), rgba(44, 41, 41, 0.8));
+    background: linear-gradient(rgba(240, 244, 245, 0.7), rgba(44, 41, 41, 0.8));
 }
 
 /* Estilo para las imágenes de las redes sociales */
@@ -395,12 +409,15 @@ footer img {
     vertical-align: middle;
 
 }
-hr{
-    margin:50px 0;
-}
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
 
+.whatsapp {
+    width: 130px;
+}
+
+/* separador de secciones*/
+hr {
+    margin: 50px 0;
+}
 
 /*Tablet*/
 @media (max-width: 900px) {
@@ -553,9 +570,9 @@ Utiliza las referencias de los breakpoints @media abajo */
 
     /*Experiencia Profesional*/
     .experience__info {
-   
+
         margin: 10px 35px 40px;
-      
+
     }
 
     .experience__section__title {
@@ -565,22 +582,31 @@ Utiliza las referencias de los breakpoints @media abajo */
 
     .experiencie__box {
         display: flex;
-        align-items: flex-start; /* Alinear verticalmente los elementos */
-        margin-bottom: 20px; /* Espacio entre cada experiencia */
+        align-items: flex-start;
+        /* Alinear verticalmente los elementos */
+        margin-bottom: 20px;
+        /* Espacio entre cada experiencia */
         flex-direction: column;
     }
+
     .experiencie__box1 {
         display: flex;
-        align-items: flex-start; /* Alinear verticalmente los elementos */
-        margin-bottom: 20px; /* Espacio entre cada experiencia */
+        align-items: flex-start;
+        /* Alinear verticalmente los elementos */
+        margin-bottom: 20px;
+        /* Espacio entre cada experiencia */
         flex-direction: column;
     }
-    
+
     .experience__img {
-        width: 100%; /* Ajusta el tamaño según lo necesites */
-        height: auto; /* Ajusta el tamaño según lo necesites */
-        margin-left: 20px; /* Espacio entre la imagen y el texto */
+        width: 100%;
+        /* Ajusta el tamaño según lo necesites */
+        height: auto;
+        /* Ajusta el tamaño según lo necesites */
+        margin-left: 20px;
+        /* Espacio entre la imagen y el texto */
     }
+
     .experience {
         overflow: hidden;
         /* Evita que los elementos se desborden */
@@ -616,7 +642,7 @@ Utiliza las referencias de los breakpoints @media abajo */
     .formcontato__subtext {
         display: block;
         margin: 5px auto;
-    
+
     }
 
     .formcontato__input,
@@ -718,7 +744,7 @@ Utiliza las referencias de los breakpoints @media abajo */
 
     /*Titulo*/
     .title__profile {
-        width:130px;
+        width: 130px;
         border-radius: 50%;
     }
 
@@ -785,10 +811,10 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 
     /*Formación Académica*/
-    .formacionAcademicaTitulo{
+    .formacionAcademicaTitulo {
         font-size: 25px;
     }
-    
+
     .academic__courses {
         background-color: #e0eefd;
         border-radius: 10px;
@@ -827,9 +853,10 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 
     /*Experiencia Profesional*/
-    .experienciaProfecionalTitulo{
+    .experienciaProfecionalTitulo {
         font-size: 25px;
     }
+
     .experience__info {
         margin: 10px 0px 40px 20px;
     }
@@ -872,6 +899,7 @@ Utiliza las referencias de los breakpoints @media abajo */
         text-align: center;
         /* Centra horizontalmente el contenido del formulario */
     }
+
     .formcontato__img {
         margin-top: 20px;
         margin-bottom: 30px;
@@ -882,14 +910,14 @@ Utiliza las referencias de los breakpoints @media abajo */
     .formcontato__text {
         text-align: center;
         font-size: 16px;
-       
+
         /* Centra los elementos horizontalmente */
     }
 
     .formcontato__subtext {
         display: block;
         margin: 5px auto;
-    
+
     }
 
     .formcontato__input,
