@@ -237,8 +237,15 @@ ul.title__network {
     font-weight: bold;
 }
 .experience__info {
-    margin: 10% ;
-    
+    margin: 2% ;
+  
+}
+.experience__description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+
 }
 
 .experience__section__title {
@@ -280,6 +287,9 @@ ul.title__network {
 }
 
 .boton_repositorio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 10px 0 0;
     width: 150px;
     height: 40px;
@@ -393,7 +403,7 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 
 /*Tablet*/
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
     /*Menu*/
     .tudo {
@@ -821,7 +831,7 @@ Utiliza las referencias de los breakpoints @media abajo */
         font-size: 25px;
     }
     .experience__info {
-        margin: 10px 20px 40px;
+        margin: 10px 0px 40px 20px;
     }
 
     .experience__section__title {
