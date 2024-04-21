@@ -48,9 +48,11 @@ https://en.bem.info/methodology/quick-start/*/
     padding: 0 8%;
     background-color: #f0f4f5;
 }
-.menu__title{
+
+.menu__title {
     font-size: 30px;
 }
+
 section.menu {
     display: flex;
     align-items: stretch;
@@ -127,15 +129,18 @@ ul.title__network {
 .about__container {
     background-color: #d7e9fc;
     padding: 20px;
-    border-radius: 10px;
-
 }
 
 
 /*Skills*/
+.skills__box img {
+    width: 60%;
+}
+
 .skills__title {
     margin-top: 50px;
     text-align: center;
+    font-size: 30px;
 }
 
 .skills__line {
@@ -155,6 +160,7 @@ ul.title__network {
 .hobbies__title {
     margin-top: 50px;
     text-align: center;
+    font-size: 30px;
 }
 
 .hobbies__line {
@@ -180,7 +186,7 @@ ul.title__network {
 
 .academic__courses {
     background-color: #e0eefd;
-    border-radius: 10px;
+
 }
 
 .academic__courses {
@@ -294,7 +300,7 @@ ul.title__network {
     max-width: 90%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
     display: block;
-    margin: 0 auto;
+    margin: 0 10px auto;
     /* Centra horizontalmente la imagen */
     border-radius: 10px;
 }
@@ -404,16 +410,18 @@ footer {
 
 /* Estilo para las imágenes de las redes sociales */
 footer img {
-    width: 90px;
+    width: 100px;
     height: auto;
     margin: 0 5px;
     display: inline-block;
     vertical-align: middle;
-
+    transition: transform 0.4s ease;
 }
-
+footer img:hover{
+    transform: scale(1.2);
+}
 .whatsapp {
-    width: 130px;
+    width: 120px;
 }
 
 /* separador de secciones*/
@@ -490,9 +498,9 @@ hr {
 
     .about__container {
         background-color: #d7e9fc;
-        margin: 0 -4%;
+
         /* Compensación para el padding de .tudo */
-        padding: 15px 28.5px;
+
         /* Ajusta el padding para que coincida con el de .tudo */
     }
 
@@ -765,12 +773,7 @@ hr {
         margin: 16px 0 0 0;
     }
 
-    .about__container {
-        background-color: #d1e7ff;
-        padding: 15px;
-        /* Ajusta el padding para que coincida con el de .tudo */
-        border-radius: 10px;
-    }
+
 
 
 
