@@ -96,7 +96,7 @@ section.menu,
 }
 
 .title__profile {
-    width: 368px;
+    width: 25%;
     border-radius: 50%;
 }
 
@@ -417,9 +417,11 @@ footer img {
     vertical-align: middle;
     transition: transform 0.4s ease;
 }
-footer img:hover{
+
+footer img:hover {
     transform: scale(1.2);
 }
+
 .whatsapp {
     width: 120px;
 }
@@ -430,7 +432,7 @@ hr {
 }
 
 /*Tablet*/
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
     /*Menu*/
     .tudo {
@@ -439,7 +441,12 @@ hr {
     }
 
     .title__bio {
-        font-size: 26px;
+        font-size: 20px;
+    }
+
+    .menu__list__item__contato {
+        display: block;
+        padding: 10px;
     }
 
     section.menu {
@@ -467,7 +474,7 @@ hr {
 
     /*title*/
     .title__profile {
-        width: 250px;
+        width: 25%;
         border-radius: 50%;
     }
 
@@ -484,6 +491,8 @@ hr {
         display: flex;
         justify-content: space-evenly;
         padding: 0;
+        gap: 10px;
+
     }
 
     /*Sección sobre mi*/
@@ -543,7 +552,9 @@ hr {
     /*Formación Académica*/
     .academic__courses {
         background-color: #e0eefd;
-        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     .academic__title {
@@ -713,6 +724,15 @@ hr {
         background-color: #f0f4f5;
     }
 
+    .menu__title {
+        font-size: 18px;
+    }
+
+    .menu__list__item__contato {
+        display: block;
+
+    }
+
     .title__bio {
         font-size: 20px;
     }
@@ -723,9 +743,9 @@ hr {
 
     section.menu {
         display: flex;
-        align-items: stretch;
         font-size: 14px;
-        justify-content: space-between;
+        align-content: center;
+        align-items: baseline;
 
     }
 
@@ -741,8 +761,10 @@ hr {
     }
 
     .title__div {
+
         display: flex;
         flex-direction: column;
+        align-content: center;
         align-items: center;
         margin-bottom: 20px;
 
@@ -754,14 +776,16 @@ hr {
 
     /*Titulo*/
     .title__profile {
-        width: 130px;
+        width: 25%;
         border-radius: 50%;
     }
 
     ul.title__network {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         padding: 0;
+        gap: 15px;
+        font-size: 90%;
     }
 
     /*Sección sobre mi*/
@@ -772,9 +796,6 @@ hr {
     .about__paragraph {
         margin: 16px 0 0 0;
     }
-
-
-
 
 
     /*Skills*/
@@ -822,7 +843,9 @@ hr {
 
     .academic__courses {
         background-color: #e0eefd;
-        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     .academic__title {
