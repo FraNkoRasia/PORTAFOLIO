@@ -429,6 +429,7 @@ footer img:hover {
 /* separador de secciones*/
 hr {
     margin: 50px 0;
+    box-shadow: 0 0 20px black;
 }
 
 /*Tablet*/
