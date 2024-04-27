@@ -310,14 +310,16 @@
                         <input class="formcontato__input" type="text" name="asunto" placeholder="Asunto">
                         <textarea class="formcontato__textarea" rows="5" cols="40" id="mensaje" name="mensaje"
                             placeholder="Mensaje"></textarea>
-
-                        <input type="hidden" name="_next" value="https://portafolio-rho-gules.vercel.app/">
-                        <input type="hidden" name="_captcha" value="true">
-
                         <button type="submit" class="formcontato__boton">Enviar mensaje</button>
 
                     </form>
-
+                    <script>
+                        function redirectToPortfolio() {
+                            window.location.href = "https://portafolio-rho-gules.vercel.app/";
+                            alert("Mensaje enviado, volver al Portafolio");
+                            return false;
+                        }
+                    </script>
                 </div>
             </div>
         </section>
