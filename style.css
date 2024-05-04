@@ -7,7 +7,7 @@ coloque nas sessões indicadas*/
 :root {
     /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-    --cor-de-fundo: #F5F5F5;
+    --cor-de-fundo: #f0f4f5;
     --cor-de-link: #000;
     --colorBoton: #007bff;
 }
@@ -44,9 +44,10 @@ con una interfaz de usuario compleja, y permite la reutilización del código ex
 Enlace de la documentación oficial!
 https://en.bem.info/methodology/quick-start/*/
 /*Menu*/
+
 .tudo {
     padding: 0 8%;
-    background-color: #f0f4f5;
+   
 }
 
 .menu__title {
