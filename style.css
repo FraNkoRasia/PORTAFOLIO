@@ -151,13 +151,18 @@ ul.title__network {
     gap: 10px;
     justify-content: space-between;
 }
-
+ul{
+    padding: 0;
+}
 .skills__box {
-    width: 20%;
+    width: 120px;
     margin-bottom: 20px;
     background-color: rgb(255, 255, 255);
+    padding: 15px ;
 }
-
+.skills img{
+    width: 100%;
+}
 /*Hobbies*/
 .hobbies__title {
     margin-top: 50px;
@@ -549,9 +554,10 @@ hr {
     }
 
     .skills__box {
-        width: 30%;
+        width: 80px;
         margin-bottom: 20px;
         background-color: rgb(255, 255, 255);
+        padding: 15px ;
     }
 
     /*Hobbies*/
@@ -831,11 +837,11 @@ hr {
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
     .skills__box {
-        width: 42%;
+        width: 50px;
         margin-bottom: 20px;
         background-color: rgb(255, 255, 255);
+        padding: 15px ;
     }
 
 
