@@ -146,13 +146,14 @@ ul.title__network {
 
 .skills__line {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+  
     gap: 10px;
     justify-content: space-between;
 }
 
 .skills__box {
-    width: 100%;
+    width: 20%;
     margin-bottom: 20px;
     background-color: rgb(255, 255, 255);
 }
@@ -432,7 +433,26 @@ hr {
     margin: 50px 0;
     box-shadow: 0 0 20px black;
 }
-
+/* Estilos para el botón */
+#myBtn {
+    display: none; /* Ocultar el botón por defecto */
+    position: fixed; /* Fijar el botón en una posición */
+    bottom: 140px; /* Distancia desde el borde inferior */
+    right: -5px; /* Distancia desde el borde derecho */
+    z-index: 99; /* Asegurar que el botón esté por encima de otros elementos */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    padding: 15px; /* Espaciado interno del botón */
+    transition: transform 0.4s ease;
+ 
+    
+  }
+  
+  #myBtn:hover {
+   transform: scale(1.1);
+  }
+  #myBtn img{
+    width: 50px;
+  }
 /*Tablet*/
 @media (max-width: 768px) {
 
