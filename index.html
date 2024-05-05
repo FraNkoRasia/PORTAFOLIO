@@ -17,6 +17,12 @@
 </head>
 
 <body>
+    <video autoplay muted loop id="background-video">
+        <source src="assets/video.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+
     <!-- Sección del Menú  -->
     <div class="tudo">
 
@@ -30,7 +36,6 @@
                 <ul class="menu__list">
                     <li class="menu__list__item"><a href="#sobre-mi">Sobre mi</a></li>
                     <li class="menu__list__item"><a href="#skills">Skills</a></li>
-                    <li class="menu__list__item"><a href="#hobbies">Hobbies</a></li>
                     <li class="menu__list__item"><a href="#formacion">Formación</a></li>
                     <li class="menu__list__item"><a href="#xp">Proyectos</a></li>
                     <li class="menu__list__item"><a href="#contacto">rasiafranko@gmail.com</a></li>
@@ -78,26 +83,9 @@
         <!-- Sección de Skills -->
         <section class="skills" id="skills">
             <h3 class="skills__title">Skills</h3>
-
+            <h2 class="title-back-front">Backend</h2>
             <div class="skills__line">
-                <div class="skills__box">
-                    <ul>
-                        <li class="skills__img"><img src="assets/html.png"></li>
-                        <!-- <li class="skills__name"> HTML 5</li> -->
-                    </ul>
-                </div>
-                <div class="skills__box">
-                    <ul>
-                        <li class="skills__img"> <img src="assets/css.png" alt=""> </li>
-                        <!-- <li class="skills__name">CSS</li> -->
-                    </ul>
-                </div>
-                <div class="skills__box">
-                    <ul>
-                        <li class="skills__img"> <img src="assets/js.png" alt=""></li>
-                        <!-- <li class="skills__name">JavaScript</li> -->
-                    </ul>
-                </div>
+
                 <div class="skills__box">
                     <ul>
                         <li class="skills__img"> <img src="assets/java.png" alt=""></li>
@@ -108,13 +96,6 @@
                     <ul>
                         <li class="skills__img"><img src="assets/mysql.png" alt=""></li>
                         <!-- <li class="skills__name">MySQL</li> -->
-                    </ul>
-                </div>
-
-                <div class="skills__box">
-                    <ul>
-                        <li class="skills__img"> <img src="assets/react.png" alt=""> </li>
-                        <!-- <li class="skills__name">React</li> -->
                     </ul>
                 </div>
 
@@ -139,59 +120,44 @@
                     </ul>
                 </div>
 
+            </div>
+        </section>
 
+        <!-- Sección de Skills -->
+        <section class="skills" id="skills">
 
+            <h2 class="title-back-front">Frontend</h2>
+            <div class="skills__line">
+                <div class="skills__box">
+                    <ul>
+                        <li class="skills__img"><img src="assets/html.png"></li>
+                        <!-- <li class="skills__name"> HTML 5</li> -->
+                    </ul>
+                </div>
+                <div class="skills__box">
+                    <ul>
+                        <li class="skills__img"> <img src="assets/css.png" alt=""> </li>
+                        <!-- <li class="skills__name">CSS</li> -->
+                    </ul>
+                </div>
+                <div class="skills__box">
+                    <ul>
+                        <li class="skills__img"> <img src="assets/js.png" alt=""></li>
+                        <!-- <li class="skills__name">JavaScript</li> -->
+                    </ul>
+                </div>
+
+                <div class="skills__box">
+                    <ul>
+                        <li class="skills__img"> <img src="assets/react.png" alt=""> </li>
+                        <!-- <li class="skills__name">React</li> -->
+                    </ul>
+                </div>
 
             </div>
         </section>
 
-        <!-- Sección de Hobbies -->
-        <section class="hobbies" id="hobbies">
-            <h3 class="hobbies__title">Hobbies</h3>
-            <div class="hobbies__line">
-                <!-- <div class="hobbies__box">
-                    <ul>
-                        <li class="hobbies__img"><img src="assets\skate_icon.png"></li>
-                        <li class="hobbies__name"> Patinaje</li>
-                    </ul>
-                </div>
 
-                <div class="hobbies__box">
-                    <ul>
-                        <li class="hobbies__img"> <img src="assets\guitar_icon.png" alt=""></li>
-                        <li class="hobbies__name">Tocar bajo</li>
-                    </ul>
-                </div> -->
-
-                <div class="hobbies__box">
-                    <ul>
-                        <li class="hobbies__img"> <img src="assets\headphones_icon.png" alt=""></li>
-                        <li class="hobbies__name">Oir música</li>
-                    </ul>
-                </div>
-
-                <div class="hobbies__box">
-                    <ul>
-                        <li class="hobbies__img"><img src="assets\tv_icon.png" alt=""></li>
-                        <li class="hobbies__name">Ver séries</li>
-                    </ul>
-                </div>
-
-                <div class="hobbies__box">
-                    <ul>
-                        <li class="hobbies__img"> <img src="assets\forkspoon_icon.png" alt=""> </li>
-                        <li class="hobbies__name">Cocinar</li>
-                    </ul>
-                </div>
-
-                <div class="hobbies__box">
-                    <ul>
-                        <li class="hobbies__img"> <img src="assets\camera_icon.png" alt=""> </li>
-                        <li class="hobbies__name">Tomar fotos</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
         <hr>
         <!-- Sección de Formación académica -->
         <section class="academic" id="formacion">
@@ -234,14 +200,15 @@
             <div class="experiencie__box1">
                 <img class="experience__img" src="assets\playcode.png">
                 <div class="experience__info">
-                    <h2 class="experience__title">Proyecto Personal - Java JDK17, Springboots 6, JWT, MySQL, Maven,
-                        HTML, CSS, ReactJS, Etc.</h2>
-                    <h3 class="experience__text">Proyecto Personal - API REST</h3>
+                    <h2 class="experience__title">Proyecto Personal - API REST </h2>
+                    <p>Java JDK17, Springboots 6, JWT, MySQL, Maven,
+                        HTML, CSS, ReactJS, Etc.</p>
+                    <h3 class="experience__text">Proyecto Personal - Login y Registro</h3>
                     <div class="experience__description">
                         <!-- Pon el enlace del proyecto en Github o GithubPages -->
                         <span class="experience__repo"><a
                                 href="https://github.com/FraNkoRasia/LOGIN-REGISTRO-Spring-Security-6-y-JWT.git"><button
-                                    class="boton_repositorio">Repositório GitHub</button></a></span>
+                                    class="boton_repositorio">Repo-GitHub</button></a></span>
                         <!-- <span class="boton_demo"><a href=""><button class="experience__botao--demo">Ver
                                     demo</button></a></span> -->
                     </div>
@@ -251,14 +218,15 @@
             <div class="experiencie__box">
                 <img class="experience__img" src="assets\proyecto_final.png">
                 <div class="experience__info">
-                    <h2 class="experience__title">Proyecto Final En Egg Live - Java, html, css, MySQL, springboots,
-                        Maven, Etc.</h2>
-                    <h3 class="experience__text">Proyecto Final Empleabilidad</h3>
+                    <h2 class="experience__title">Proyecto Final - Egg Live </h2>
+                    <p>Java, html, css, MySQL, springboots,
+                        Maven, Etc.</p>
+                    <h3 class="experience__text">Proyecto Final de Empleabilidad</h3>
                     <div class="experience__description">
                         <!-- Pon el enlace del proyecto en Github o GithubPages -->
                         <span class="experience__repo"><a
                                 href="https://github.com/FraNkoRasia/Proyecto-Final-En-Egg-Live.git"><button
-                                    class="boton_repositorio">Repositório GitHub</button></a></span>
+                                    class="boton_repositorio">Repo-GitHub</button></a></span>
                         <!-- <span class="boton_demo"><a href=""><button class="experience__botao--demo">Ver 
                                     demo</button></a></span>-->
                     </div>
@@ -269,12 +237,13 @@
                 <img class="experience__img" src="assets\encriptador.png">
                 <div class="experience__info">
                     <h2 class="experience__title">Encriptador de texto</h2>
+                    <p>Html, Css, JavaScript.</p>
                     <h3 class="experience__text">Challenge Alura Codificador</h3>
                     <div class="experience__description">
                         <!-- Pon el enlace del proyecto en Github o GithubPages -->
                         <span class="experience__repo"><a
                                 href="https://github.com/FraNkoRasia/ENCRIPTADOR-DE-TEXTO.git"><button
-                                    class="boton_repositorio">Repositório GitHub</button></a></span>
+                                    class="boton_repositorio">Repo-GitHub</button></a></span>
                         <span class="experience__demo"><a
                                 href="https://frankorasia.github.io/ENCRIPTADOR-DE-TEXTO/"><button
                                     class="boton_demo">Ver
@@ -283,41 +252,6 @@
                 </div>
             </div>
 
-
-            <!-- Cuarto proyecto -->
-            <!-- <div class="experiencie__box">
-                <img class="experience__img" src="assets\barberia.png">
-                <div class="experience__info">
-                    <h2 class="experience__title">Barberia - HTML y CSS</h2>
-                    <h3 class="experience__text">Challenge Alura</h3>
-                    <div class="experience__description">
-
-                        <span class="experience__repo"><a href="https://github.com/FraNkoRasia/BARBERIA.git"><button
-                                    class="boton_repositorio">Repositório GitHub</button></a></span>
-                        <span class="experience__demo"><a href="https://frankorasia.github.io/BARBERIA/"><button
-                                    class="boton_demo">Ver
-                                    Pagina</button></a></span>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Quinto proyecto -->
-            <!-- <div class="experiencie__box1">
-                <img class="experience__img" src="assets\juegosecreto.png">
-                <div class="experience__info">
-                    <h2 class="experience__title">Juego del Num secreto - HTML, CSS y JavaScript</h2>
-                    <h3 class="experience__text">Challenge Alura</h3>
-                    <div class="experience__description">
-                     
-                        <span class="experience__repo"><a
-                                href="https://github.com/FraNkoRasia/JUEGO-SECRETO.git"><button
-                                    class="boton_repositorio">Repositório GitHub</button></a></span>
-                        <span class="experience__demo"><a href="https://frankorasia.github.io/JUEGO-SECRETO/"><button
-                                    class="boton_demo">Ver
-                                    Pagina</button></a></span>
-                    </div>
-                </div>
-            </div> -->
         </section>
 
         <hr>
@@ -328,9 +262,9 @@
                     <img class="formcontato__img" src="assets\contactame.png">
                 </div>
                 <div class="formcontato__text">
-                    <p class="formcontato__subtext">¿Quieres contactarme?</p>
+
                     <p class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con
-                        usted lo antes posible. </p>
+                        usted lo antes posible. </p><br>
                     <form class="formcontato__form" name="form" action="https://formspree.io/f/xqkrwgar" method="POST">
                         <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre">
                         <input class="formcontato__input" type="email" name="email" placeholder="E-mail">
@@ -349,7 +283,7 @@
     <section class="footer">
         <footer>
 
-            <p id="redes">Mis Redes Sociales</p>
+            <p class="mis-redes">Mis Redes Sociales</p>
             <a href="https://www.linkedin.com/in/francorasia" style="display: inline-block; vertical-align: middle;">
                 <img class="linkedin" src="assets/linkedin.png" alt="imagen de linkedin">
             </a>
