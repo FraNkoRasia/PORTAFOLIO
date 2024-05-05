@@ -28,6 +28,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
+    background-color: #181a1b;
 }
 
 ol,
@@ -45,29 +46,15 @@ a:hover {
     color: rgb(182, 105, 224);
 }
 
-#background-video {
+/* PARTICULAS DE FONDO */
+#particles-js {
+    height: 100vh;
+    width: 100%;
     position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
     z-index: -1000;
 }
 
-/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
-
-Lo que es el BEM?
-
-BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
-desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
-independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
-con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
-
-Enlace de la documentación oficial!
-https://en.bem.info/methodology/quick-start/*/
-/*Menu*/
+/* MENU */
 
 .tudo {
     padding: 0 8%;
@@ -462,7 +449,7 @@ footer {
     padding: 35px 0 15px;
     margin-top: 50px;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(153, 147, 147, 0.8));
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(90, 87, 87, 0.8));
 }
 
 /* Estilo para las imágenes de las redes sociales */
@@ -773,7 +760,7 @@ hr {
         padding: 35px 0 15px;
         margin-top: 50px;
         text-align: center;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(153, 147, 147, 0.8));
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(90, 87, 87, 0.8));
     }
 
     /* Estilo para las imágenes de las redes sociales */
@@ -1064,7 +1051,7 @@ hr {
         padding: 35px 0 15px;
         margin-top: 50px;
         text-align: center;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(153, 147, 147, 0.8));
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(90, 87, 87, 0.8));
     }
 
     /* Estilo para las imágenes de las redes sociales */
