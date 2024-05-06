@@ -111,7 +111,7 @@ section.menu,
 
 
 .title__profile {
-    width: 25%;
+    width: 40%;
     border-radius: 50%;
 }
 
@@ -509,7 +509,7 @@ hr {
 }
 
 /*Tablet*/
-@media (max-width: 768px) {
+@media (max-width: 968px) {
 
     /*Menu*/
     .tudo {
@@ -550,7 +550,7 @@ hr {
 
     /*title*/
     .title__profile {
-        width: 25%;
+        width: 40%;
         border-radius: 50%;
     }
 
@@ -558,7 +558,7 @@ hr {
     .title__div {
         display: flex;
         flex-wrap: nowrap;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 20px;
 
     }
@@ -780,7 +780,7 @@ hr {
 }
 
 /*Mobile*/
-@media (max-width: 430px) {
+@media (max-width: 560px) {
 
     /*Menu*/
     .tudo {
