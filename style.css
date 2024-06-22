@@ -554,7 +554,7 @@ hr {
     .title__div {
         display: flex;
         flex-wrap: nowrap;
-        align-items: flex-start;
+        align-items: center;
         margin-bottom: 20px;
 
     }
