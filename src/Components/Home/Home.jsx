@@ -19,7 +19,7 @@ export default function Home() {
     const [mostrarTodosProyectos, setMostrarTodosProyectos] = useState(false); // Estado para "Ver más"
     const [mostrarTodosFormacion, setMostrarTodosFormacion] = useState(false); // Estado para "Ver más"
 
-    const API_URL = 'http://localhost:3001/';
+    const API_URL = 'https://fake-api-json.vercel.app/';
 
     useEffect(() => {
         // Fetch para proyectos
