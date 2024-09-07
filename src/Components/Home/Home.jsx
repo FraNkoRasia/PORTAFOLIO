@@ -170,7 +170,7 @@ export default function Home() {
                     <p>Me llamo Franco y soy un apasionado estudiante de programación,
                         enfocado en el desarrollo web y la creación de soluciones
                         innovadoras. <span className='naranja'>Tengo experiencia en tecnologías como React,
-                            HTML, CSS Node.js, MySQL, Java, Javascript, SpringBoot y Postman, con un especial interés en el frontend</span>,
+                            Node.js y MySQL, etc, con un especial interés en el frontend</span>,
                         donde disfruto creando vistas atractivas, funcionales y responsivas.</p>
                     <p>Me considero comprometido, con una fuerte determinación para
                         enfrentar desafíos y completar proyectos. Valoro el trabajo en
