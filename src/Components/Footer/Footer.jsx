@@ -9,6 +9,15 @@ import { faTelegram } from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Footer() {
+    window.addEventListener('scroll', function() {
+        const footer = document.querySelector('.footer');
+        if (window.scrollY > 50) { // Cambia el valor según cuándo quieras que aparezca el fondo
+            footer.classList.add('footer-scrolled');
+        } else {
+            footer.classList.remove('footer-scrolled');
+        }
+    });
+    
     return (
         <footer className='footer'>
            

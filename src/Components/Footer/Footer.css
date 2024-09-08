@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
     flex-shrink: 0;
     margin-top: auto;
     display: flex;
@@ -39,9 +39,9 @@
     .redes-icon svg {
         font-size: 35px;
     }
-}
+} */
 
-/* 
+ 
 .footer {
     width: 100%;
     position: fixed;
@@ -54,12 +54,19 @@
     align-items: center;
     padding: 10px;
     z-index: 1000;
-    background-color: transparent;
     transition: background-color 0.3s ease, padding 0.3s ease;
+    background-color: transparent;
+    
 }
-
+.footer p {
+    margin: 0;
+    padding: 10px 0 0;
+    font-size: 14px;
+    text-align: center; /* Centra el texto de derechos reservados */
+    width: 100%; /* Asegura que el párrafo ocupe todo el ancho disponible */
+}
 .footer-scrolled {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Negro con 50% de transparencia */
     padding: 15px;
 }
 
@@ -84,4 +91,4 @@
     .redes-icon svg {
         font-size: 35px;
     }
-} */
+}

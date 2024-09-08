@@ -178,7 +178,7 @@
         justify-content: center;
         align-items: center;
         margin-top: 20px;
-
+        margin-bottom: 100px;
         .naranja {
             color: #f1bd5c;
             opacity: 0.9;
@@ -194,12 +194,14 @@
         p {
             margin: 10px 0;
         }
+       
     }
 
     .btn-vermas-vermenos {
         width: 100%;
         display: flex;
         justify-content: center;
+        
 
         .ver-mas {
             display: flex;
