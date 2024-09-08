@@ -124,6 +124,7 @@ body,
 	min-height: 100vh;
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
+	scroll-behavior: smooth;
 }
 
 #root {

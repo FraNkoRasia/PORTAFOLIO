@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faTelegram } from '@fortawesome/free-brands-svg-icons';
-import { MdEmail } from "react-icons/md";
+
 
 export default function Footer() {
     return (

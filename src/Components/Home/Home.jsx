@@ -72,7 +72,7 @@ export default function Home() {
             <h1 className='experiencia' id="proyectos"><FaCode />&nbsp;Proyectos</h1>
             <div className='proyectos'>
                 {proyectos
-                    .slice(0, mostrarTodosProyectos ? proyectos.length : 4) // Mostrar 4 o todos
+                    .slice(0, mostrarTodosProyectos ? proyectos.length : 3) // Mostrar 4 o todos
                     .map(proyecto => (
                         <div className='proyect' key={proyecto.id}>
                             <img src={proyecto.imagen} alt={proyecto.titulo} />
@@ -98,24 +98,26 @@ export default function Home() {
                         </div>
                     ))}
             </div>
+            <div className='btn-vermas-vermenos'>
+                {/* Botón para ver más o menos proyectos */}
+                {proyectos.length > 3 && (
+                    <button className='ver-mas' onClick={handleVerMasProyectos}>
+                        {mostrarTodosProyectos ? 'Ver menos Proyectos ' : 'Ver más Proyectos '}
+                        {mostrarTodosProyectos ? (
+                            <FaChevronUp className="ver-mas-icono" />
+                        ) : (
+                            <FaChevronDown className="ver-mas-icono" />
+                        )}
+                    </button>
+                )}
+            </div>
 
-            {/* Botón para ver más o menos proyectos */}
-            {proyectos.length > 4 && (
-                <button className='ver-mas' onClick={handleVerMasProyectos}>
-                    {mostrarTodosProyectos ? 'Ver menos Proyectos ' : 'Ver más Proyectos '}
-                    {mostrarTodosProyectos ? (
-                        <FaChevronUp className="ver-mas-icono" />
-                    ) : (
-                        <FaChevronDown className="ver-mas-icono" />
-                    )}
-                </button>
-            )}
 
             {/* Formación */}
             <h1 className='formacion' id="formacion"><PiCertificateDuotone />&nbsp;Formación</h1>
             <div className='proyectos'>
                 {formacion
-                    .slice(0, mostrarTodosFormacion ? formacion.length : 4) // Mostrar 4 o todos
+                    .slice(0, mostrarTodosFormacion ? formacion.length : 3) // Mostrar 4 o todos
                     .map(formacionItem => (
                         <div className='proyect' key={formacionItem.id}>
                             <img src={formacionItem.imagen} alt={formacionItem.institucion} />
@@ -137,7 +139,7 @@ export default function Home() {
 
             <div className='btn-vermas-vermenos'>
                 {/* Botón para ver más o menos formación */}
-                {formacion.length > 4 && (
+                {formacion.length > 3 && (
                     <button className='ver-mas' onClick={handleVerMasFormacion}>
                         {mostrarTodosFormacion ? 'Ver menos Certificados' : 'Ver más Certificados '}
                         {mostrarTodosFormacion ? (
