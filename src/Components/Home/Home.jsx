@@ -58,7 +58,7 @@ export default function Home() {
                 <h1 className='frankorasia'>Hola, soy <span className='naranja'>FraNko</span></h1>
                 <p className='descripcion'>
                     +2 años de Formacion. <span className='naranja'>Full Stack Web Developer. </span>
-                    De Rio Cuarto, Argentina <span>🇦🇷</span>. Especializado en paginas Responsivas.
+                    De Rio Cuarto, Argentina <span>🇦🇷</span>. Especializado en el desarrollo de aplicaciones web únicas y Responsivas.
 
                 </p>
             </div>
