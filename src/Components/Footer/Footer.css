@@ -62,11 +62,11 @@
     margin: 0;
     padding: 10px 0 0;
     font-size: 14px;
-    text-align: center; /* Centra el texto de derechos reservados */
-    width: 100%; /* Asegura que el párrafo ocupe todo el ancho disponible */
+    text-align: center; 
+    width: 100%;
 }
 .footer-scrolled {
-    background-color: rgba(0, 0, 0, 0.8); /* Negro con 50% de transparencia */
+    background-color: rgba(0, 0, 0, 0.8); 
     padding: 15px;
 }
 

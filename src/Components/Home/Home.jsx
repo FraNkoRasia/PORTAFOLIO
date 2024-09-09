@@ -56,7 +56,11 @@ export default function Home() {
             {/* Descripción personal */}
             <div>
                 <h1 className='frankorasia'>Hola, soy <span className='naranja'>FraNko</span></h1>
-                <p className='descripcion'>Full Stack Web Developer. De Rio Cuarto, Argentina. Especializado en paginas Responsivas.</p>
+                <p className='descripcion'>
+                    +2 años de Formacion. <span className='naranja'>Full Stack Web Developer. </span>
+                    De Rio Cuarto, Argentina <span>🇦🇷</span>. Especializado en paginas Responsivas.
+
+                </p>
             </div>
 
             {/* Redes sociales */}
