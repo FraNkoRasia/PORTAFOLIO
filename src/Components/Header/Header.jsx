@@ -23,10 +23,10 @@ export default function Header() {
             <div className="header-content">
                 <nav>
                     <ul>
-                        <li><a href="#proyectos">Proyectos</a></li>
-                        <li><a href="#formacion">Formación</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#sobre-mi">Sobre mí</a></li>
+                        <li><a className='secciones' href="#proyectos">Proyectos</a></li>
+                        <li><a className='secciones' href="#formacion">Formación</a></li>
+                        <li><a className='secciones' href="#skills">Skills</a></li>
+                        <li><a className='secciones' href="#sobre-mi">Sobre mí</a></li>
                     </ul>
                 </nav>
             </div>

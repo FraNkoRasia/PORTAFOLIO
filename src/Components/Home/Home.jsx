@@ -66,7 +66,7 @@ export default function Home() {
             {/* Redes sociales */}
             <div className='redes'>
                 <ul>
-                    <li><a href="https://github.com/FraNkoRasia?tab=repositories"><ImGithub /> GitHub</a></li>
+                    <li><a href="https://github.com/FraNkoRasia?tab=repositories"><ImGithub className='iconoGithub' /> GitHub</a></li>
                     <li><a href="https://www.linkedin.com/in/francorasia/"><GrLinkedin /> LinkedIn</a></li>
                     <li><a href=""><MdOutlineSimCardDownload /> Curriculum</a></li>
                 </ul>
@@ -87,7 +87,7 @@ export default function Home() {
                                     {/* Mostrar botón GitHub solo si existe la URL */}
                                     {proyecto.github && (
                                         <a href={proyecto.github}>
-                                            <button className='code'><TbBrandGithub />&nbsp;GitHub</button>
+                                            <button className='code'><TbBrandGithub className='iconoGithub'/>&nbsp;GitHub</button>
                                         </a>
                                     )}
 
