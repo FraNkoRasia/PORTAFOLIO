@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Home.css';
 import { ImGithub, ImLink } from "react-icons/im";
 import { GrLinkedin } from "react-icons/gr";
 import { MdOutlineSimCardDownload } from "react-icons/md";
-import { FaCode, FaChevronDown, FaChevronUp, FaHtml5, FaCss3Alt, FaReact, FaJava, FaNode } from "react-icons/fa";
+import { FaCode, FaChevronDown, FaChevronUp, FaHtml5, FaCss3Alt, FaReact, FaJava, FaNode, FaFigma, FaSass  } from "react-icons/fa";
 import { SiMysql, SiPostman } from "react-icons/si";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { TbUserCheck, TbBrandGithub } from "react-icons/tb";
@@ -122,13 +122,15 @@ export default function Home() {
             <div className='iconos-svg'>
                 <FaJava />
                 <FaNode />
-                <SiMysql />
                 <BiLogoSpringBoot />
-                <SiPostman />
+                <IoLogoJavascript />
+                <FaReact />
                 <FaHtml5 />
                 <FaCss3Alt />
-                <FaReact />
-                <IoLogoJavascript />
+                <FaSass />
+                <FaFigma />
+                <SiMysql />
+                <SiPostman />
             </div>
 
             <h1 className='sobremititulo'><TbUserCheck />&nbsp;Sobre mi</h1>
@@ -136,7 +138,7 @@ export default function Home() {
                 <img className='imagensobremi' src="/image/perfil/FraNko-3.png" alt="imagensobremi" />
                 <div>
                     <p>Me llamo Franco y soy un apasionado estudiante de programación, enfocado en el desarrollo web y la creación de soluciones innovadoras.
-                        <span className='naranja'> Tengo experiencia en tecnologías como React, Node.js, MySQL, etc, con un especial interés en el frontend</span>, 
+                        <span className='naranja'> Tengo experiencia en tecnologías como React, Node.js, MySQL, diseño UX/UI Figma, etc, con un especial interés en el frontend</span>, 
                         donde disfruto creando vistas atractivas, funcionales y responsivas.</p>
                     <p>Me considero comprometido, con una fuerte determinación para enfrentar desafíos y completar proyectos. Valoro el trabajo en equipo y 
                         busco colaborar eficazmente con mis compañeros. <span className='naranja'> Mi objetivo es seguir aprendiendo y creciendo</span> en tecnología, 
