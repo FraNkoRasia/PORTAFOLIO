@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import './Header.css';
+import './Header.scss';
 
 export default function Header() {
     useEffect(() => {
         const handleScroll = () => {
             const header = document.querySelector('.header');
             if (window.scrollY > 50) {
-                header.classList.add('header-scrolled');
+                header.classList.add("header-scrolled");
             } else {
                 header.classList.remove('header-scrolled');
             }
