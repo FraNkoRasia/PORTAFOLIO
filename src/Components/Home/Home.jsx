@@ -1,11 +1,22 @@
-import { useState, useEffect, useRef } from 'react';
-import './Home.scss';
+import { useState, useEffect, useRef } from "react";
+import "./Home.scss";
 import { ImGithub, ImLink } from "react-icons/im";
 import { GrLinkedin } from "react-icons/gr";
 import { MdOutlineSimCardDownload } from "react-icons/md";
-import { FaCode, FaChevronDown, FaChevronUp, FaHtml5, FaCss3Alt, FaReact, FaJava, FaNode, FaFigma, FaSass  } from "react-icons/fa";
+import {
+  FaCode,
+  FaChevronDown,
+  FaChevronUp,
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNode,
+  FaFigma,
+  FaGithub,
+  FaTrello,
+} from "react-icons/fa";
 import { SiMysql, SiPostman, SiSass } from "react-icons/si";
-import { BiLogoSpringBoot } from "react-icons/bi";
+import { RiTailwindCssFill } from "react-icons/ri";
 import { TbUserCheck, TbBrandGithub } from "react-icons/tb";
 import { PiCertificateDuotone } from "react-icons/pi";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -37,7 +48,7 @@ export default function Home() {
   const handleVerMasFormacion = () => setMostrarTodosFormacion((prev) => !prev);
   const toggleCurriculumOptions = () =>
     setShowCurriculumOptions((prev) => !prev);
-  
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -54,7 +65,7 @@ export default function Home() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  
+
   return (
     <div className="Home">
       <div className="imagen-titulo">
@@ -74,7 +85,7 @@ export default function Home() {
         </h1>
         <p className="descripcion">
           +2 años de Formacion.{" "}
-          <span className="naranja">Full Stack Web Developer.</span>
+          <span className="naranja">Full Stack Web Developer. </span>
           De Rio Cuarto, Argentina <span>🇦🇷</span>. Especializado en el
           desarrollo de aplicaciones web únicas y Responsivas.
         </p>
@@ -220,18 +231,18 @@ export default function Home() {
         &nbsp;Skills
       </h1>
       <div className="iconos-svg">
-        <FaJava />
-        <FaNode />
-        <BiLogoSpringBoot />
         <IoLogoJavascript />
+        <FaNode />
         <FaReact />
         <FaHtml5 />
         <FaCss3Alt />
         <SiSass />
-        <FaSass />
+        <RiTailwindCssFill />
         <FaFigma />
-        <SiMysql />
         <SiPostman />
+        <FaGithub />
+        <SiMysql />
+        <FaTrello />
       </div>
 
       <h1 className="sobremititulo">
@@ -246,29 +257,18 @@ export default function Home() {
         />
         <div>
           <p>
-            Me llamo Franco y soy desarrollador web especializado en la creación
-            de soluciones innovadoras.
+            Desarrollador web especializado en la creación de soluciones
+            innovadoras, funcionales y responsivas.
             <span className="naranja">
               {" "}
-              Tengo experiencia en tecnologías como React, Node.js, MySQL, y
-              diseño UX/UI con Figma, entre otras. Mi interés principal está en
-              el frontend
-            </span>
-            , donde disfruto diseñando vistas atractivas, funcionales y
-            responsivas.
-          </p>
-          <p>
-            Soy una persona comprometida, con una gran determinación para
-            enfrentar desafíos y completar proyectos. Valoro profundamente el
-            trabajo en equipo y me esfuerzo por colaborar de manera eficaz con
-            mis compañeros.{" "}
-            <span className="naranja">
-              {" "}
-              Mi objetivo es seguir aprendiendo y creciendo en el ámbito
-              tecnológico,
+              Con experiencia en tecnologías como React, Node.js, MySQL, y
+              diseño UX/UI con Figma.
             </span>{" "}
-            contribuyendo a proyectos que generen un impacto positivo.
+            Autodidacta con enfoque en el aprendizaje continuo y comprometido
+            con el crecimiento colaborativo. Orientado al desarrollo de
+            proyectos de alta calidad que generen un impacto positivo
           </p>
+          <p></p>
         </div>
       </div>
     </div>
