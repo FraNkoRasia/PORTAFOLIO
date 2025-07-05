@@ -15,7 +15,7 @@ import {
   FaGithub,
   FaTrello,
 } from "react-icons/fa";
-import { SiMysql, SiPostman, SiSass } from "react-icons/si";
+import { SiMysql, SiPostman } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { TbUserCheck, TbBrandGithub } from "react-icons/tb";
 import { PiCertificateDuotone } from "react-icons/pi";
@@ -236,7 +236,6 @@ export default function Home() {
         <FaReact />
         <FaHtml5 />
         <FaCss3Alt />
-        <SiSass />
         <RiTailwindCssFill />
         <FaFigma />
         <SiPostman />
