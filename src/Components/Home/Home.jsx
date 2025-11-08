@@ -426,7 +426,7 @@ export default function Home() {
         <SiPostman />
         <FaGithub />
         <SiMysql />
-        <FaTrello />
+     
       </div>
 
       <h1 className="sobremititulo">
