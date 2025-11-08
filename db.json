@@ -4,7 +4,12 @@
       "id": 1,
       "titulo": "Coria Servicios",
       "descripcion": "'Coria Servicios' es una aplicación creada para atender las necesidades de los clientes, mientras ofrece oportunidades laborales a proveedores calificados en áreas esenciales como electricidad, agua y gas. El proyecto utiliza tecnologías como CSS, HTML, Java, Spring Boot y MySQL.",
-      "imagen": "/image/proyectos/servicios.avif",
+      "imagen": "/image/proyectos/servicios.webp",
+      "imagenes": [
+        "/image/proyectos/servicios.webp",
+        "/image/proyectos/almapage.webp",
+        "/image/proyectos/sippa.webp"
+      ],
       "github": "https://github.com/FraNkoRasia/Proyecto-Final-En-Egg-Live",
       "web": ""
     },
@@ -12,7 +17,12 @@
       "id": 2,
       "titulo": "Sonica",
       "descripcion": "'Sonica' es una plataforma web enfocada en ofrecer información sobre eventos y recitales, así como la venta de entradas. El frontend está desarrollado con HTML, CSS y JavaScript, mientras que el backend utiliza Node.js y Express. La base de datos está alojada en Alwaysdata.",
-      "imagen": "/image/proyectos/sonica.avif",
+      "imagen": "/image/proyectos/sonica.webp",
+      "imagenes": [
+        "/image/proyectos/sonica.webp",
+        "/image/proyectos/aluraFlix.webp",
+        "/image/proyectos/CutStyle.webp"
+      ],
       "github": "https://github.com/Pablo-r-stack/sonicaFront",
       "web": "https://sonica-front.vercel.app/index.html"
     },
@@ -20,7 +30,12 @@
       "id": 3,
       "titulo": "AluraGeek",
       "descripcion": "Esta página web utiliza HTML, CSS y JavaScript para implementar un sistema CRUD de gestión de productos. Los usuarios pueden crear, ver, actualizar y eliminar productos, con manipulación dinámica del DOM y una base de datos simulada en JSON.",
-      "imagen": "/image/proyectos/aluraGeek.avif",
+      "imagen": "/image/proyectos/aluraGeek.webp",
+      "imagenes": [
+        "/image/proyectos/aluraGeek.webp",
+        "/image/proyectos/servicios.webp",
+        "/image/proyectos/aluraFlix.webp"
+      ],
       "github": "https://github.com/FraNkoRasia/Challenge--ALURAGEEK",
       "web": "https://challenge-alurageek-mu.vercel.app/index.html"
     },
@@ -28,7 +43,13 @@
       "id": 4,
       "titulo": "AluraFlix",
       "descripcion": "AluraFlix es un proyecto que simula una aplicación web de un servidor de películas. La misma fue desarrollada con ReactJs + Vite + Jsonserver (servidor fake-api para consumo de datos que permite realizar un CRUD y poder visualizar los cambios).",
-      "imagen": "/image/proyectos/aluraFlix.avif",
+      "imagen": "/image/proyectos/aluraFlix.webp",
+      "imagenes": [
+        "/image/proyectos/aluraFlix.webp",
+        "/image/proyectos/aluraGeek.webp",
+        "/image/proyectos/sonica.webp",
+        "/image/proyectos/CutStyle.webp"
+      ],
       "github": "https://github.com/FraNkoRasia/Challenge--ALURAGEEK",
       "web": "https://challenge-alurageek-mu.vercel.app/index.html"
     }

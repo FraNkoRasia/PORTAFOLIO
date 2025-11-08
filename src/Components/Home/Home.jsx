@@ -14,6 +14,9 @@ import {
   FaFigma,
   FaGithub,
   FaTrello,
+  FaTimes,
+  FaChevronLeft,
+  FaChevronRight,
 } from "react-icons/fa";
 import { SiMysql, SiPostman } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -29,6 +32,10 @@ export default function Home() {
   const [mostrarTodosFormacion, setMostrarTodosFormacion] = useState(false);
   const [showCurriculumOptions, setShowCurriculumOptions] = useState(false);
   const curriculumRef = useRef(null);
+  const [modalAbierto, setModalAbierto] = useState(false);
+  const [proyectoModal, setProyectoModal] = useState(null);
+  const [imagenActualModal, setImagenActualModal] = useState(0);
+  const intervaloModalRef = useRef(null);
 
   const API_URL = "https://fake-api-json.vercel.app/";
 
@@ -65,6 +72,102 @@ export default function Home() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  // Función para abrir el modal con un proyecto específico
+  const abrirModal = (proyecto) => {
+    setProyectoModal(proyecto);
+    setImagenActualModal(0);
+    setModalAbierto(true);
+  };
+
+  // Función para cerrar el modal
+  const cerrarModal = () => {
+    setModalAbierto(false);
+    setProyectoModal(null);
+    setImagenActualModal(0);
+    if (intervaloModalRef.current) {
+      clearInterval(intervaloModalRef.current);
+      intervaloModalRef.current = null;
+    }
+  };
+
+  // Función para cambiar a la siguiente imagen en el modal
+  const siguienteImagen = () => {
+    if (proyectoModal) {
+      const imagenes = proyectoModal.imagenes || (proyectoModal.imagen ? [proyectoModal.imagen] : []);
+      if (imagenes.length > 0) {
+        setImagenActualModal((prev) => (prev + 1) % imagenes.length);
+      }
+    }
+  };
+
+  // Función para cambiar a la imagen anterior en el modal
+  const imagenAnterior = () => {
+    if (proyectoModal) {
+      const imagenes = proyectoModal.imagenes || (proyectoModal.imagen ? [proyectoModal.imagen] : []);
+      if (imagenes.length > 0) {
+        setImagenActualModal((prev) => (prev - 1 + imagenes.length) % imagenes.length);
+      }
+    }
+  };
+
+  // Efecto para el carrusel automático en el modal
+  useEffect(() => {
+    if (modalAbierto && proyectoModal) {
+      const imagenes = proyectoModal.imagenes || (proyectoModal.imagen ? [proyectoModal.imagen] : []);
+      
+      if (imagenes.length > 1) {
+        // Limpiar intervalo anterior si existe
+        if (intervaloModalRef.current) {
+          clearInterval(intervaloModalRef.current);
+        }
+
+        // Crear nuevo intervalo para el carrusel automático
+        intervaloModalRef.current = setInterval(() => {
+          setImagenActualModal((prev) => (prev + 1) % imagenes.length);
+        }, 4000); // Cambiar imagen cada 4 segundos
+      }
+    } else {
+      // Limpiar intervalo cuando se cierra el modal
+      if (intervaloModalRef.current) {
+        clearInterval(intervaloModalRef.current);
+        intervaloModalRef.current = null;
+      }
+    }
+
+    return () => {
+      if (intervaloModalRef.current) {
+        clearInterval(intervaloModalRef.current);
+      }
+    };
+  }, [modalAbierto, proyectoModal]);
+
+  // Efecto para cerrar el modal con la tecla Escape
+  useEffect(() => {
+    if (!modalAbierto) return;
+
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        cerrarModal();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [modalAbierto]);
+
+  // Efecto para prevenir el scroll del body cuando el modal está abierto
+  useEffect(() => {
+    if (modalAbierto) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [modalAbierto]);
 
   return (
     <div className="Home">
@@ -135,34 +238,116 @@ export default function Home() {
       <div className="proyectos">
         {proyectos
           .slice(0, mostrarTodosProyectos ? proyectos.length : 3)
-          .map((proyecto) => (
-            <div className="proyect" key={proyecto.id}>
-              <img src={proyecto.imagen} alt={proyecto.titulo} />
-              <div>
-                <h1 className="titulo-proyecto">{proyecto.titulo}</h1>
-                <p className="descripcion-proyecto">{proyecto.descripcion}</p>
-                <div className="btn-code-preview">
-                  {proyecto.github && (
-                    <a href={proyecto.github}>
-                      <button className="code">
-                        <TbBrandGithub className="iconoGithub" />
-                        &nbsp;GitHub
-                      </button>
-                    </a>
+          .map((proyecto) => {
+            // Determinar el array de imágenes y la imagen principal
+            const imagenes = proyecto.imagenes || (proyecto.imagen ? [proyecto.imagen] : []);
+            const imagenPrincipal = proyecto.imagen || (imagenes.length > 0 ? imagenes[0] : '');
+            const tieneMultiplesImagenes = imagenes.length > 1;
+
+            return (
+              <div className="proyect" key={proyecto.id}>
+                <div 
+                  className="imagen-proyecto-contenedor"
+                  onClick={() => imagenes.length > 0 && imagenPrincipal ? abrirModal(proyecto) : null}
+                  style={{ cursor: imagenes.length > 0 && imagenPrincipal ? "pointer" : "default" }}
+                >
+                  {imagenPrincipal && (
+                    <img
+                      src={imagenPrincipal}
+                      alt={proyecto.titulo}
+                      className="imagen-proyecto"
+                      onError={(e) => {
+                        console.error(`Error al cargar imagen: ${imagenPrincipal}`, e);
+                        e.target.style.opacity = '0';
+                      }}
+                    />
                   )}
-                  {proyecto.web && (
-                    <a href={proyecto.web}>
-                      <button className="preview">
-                        <ImLink />
-                        &nbsp;Preview
-                      </button>
-                    </a>
+                  {tieneMultiplesImagenes && (
+                    <div className="badge-multiples-imagenes">
+                      {imagenes.length} imágenes
+                    </div>
                   )}
                 </div>
+                <div>
+                  <h1 className="titulo-proyecto">{proyecto.titulo}</h1>
+                  <p className="descripcion-proyecto">{proyecto.descripcion}</p>
+                  <div className="btn-code-preview">
+                    {proyecto.github && (
+                      <a href={proyecto.github} onClick={(e) => e.stopPropagation()}>
+                        <button className="code">
+                          <TbBrandGithub className="iconoGithub" />
+                          &nbsp;GitHub
+                        </button>
+                      </a>
+                    )}
+                    {proyecto.web && (
+                      <a href={proyecto.web} onClick={(e) => e.stopPropagation()}>
+                        <button className="preview">
+                          <ImLink />
+                          &nbsp;Preview
+                        </button>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+      </div>
+
+      {/* Modal con carrusel */}
+      {modalAbierto && proyectoModal && (() => {
+        const imagenesModal = proyectoModal.imagenes || (proyectoModal.imagen ? [proyectoModal.imagen] : []);
+        const tieneMultiplesImagenes = imagenesModal.length > 1;
+        
+        return (
+          <div className="modal-overlay" onClick={cerrarModal}>
+            <div className="modal-contenido" onClick={(e) => e.stopPropagation()}>
+              <div className="modal-imagen-contenedor">
+                <button className="modal-cerrar" onClick={cerrarModal}>
+                  <FaTimes />
+                </button>
+                
+                {tieneMultiplesImagenes && (
+                  <>
+                    <button className="modal-anterior" onClick={imagenAnterior}>
+                      <FaChevronLeft />
+                    </button>
+                    <button className="modal-siguiente" onClick={siguienteImagen}>
+                      <FaChevronRight />
+                    </button>
+                  </>
+                )}
+
+                <img
+                  src={imagenesModal[imagenActualModal] || ''}
+                  alt={proyectoModal.titulo}
+                  className="modal-imagen"
+                />
+              </div>
+
+              {tieneMultiplesImagenes && (
+                <div className="modal-indicadores">
+                  {imagenesModal.map((_, index) => (
+                    <span
+                      key={index}
+                      className={`modal-punto ${
+                        index === imagenActualModal ? "activo" : ""
+                      }`}
+                      onClick={() => setImagenActualModal(index)}
+                    />
+                  ))}
+                </div>
+              )}
+
+              <div className="modal-info">
+                <h2 className="modal-titulo">{proyectoModal.titulo}</h2>
+                <p className="modal-descripcion">{proyectoModal.descripcion}</p>
               </div>
             </div>
-          ))}
-      </div>
+          </div>
+        );
+      })()}
       <div className="btn-vermas-vermenos">
         {proyectos.length > 3 && (
           <button className="ver-mas" onClick={handleVerMasProyectos}>
