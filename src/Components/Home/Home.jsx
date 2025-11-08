@@ -441,16 +441,14 @@ export default function Home() {
         />
         <div>
           <p>
-            Desarrollador web especializado en la creación de soluciones
-            innovadoras, funcionales y responsivas.
+          Desarrollador web especializado en soluciones modernas y responsivas
             <span className="naranja">
               {" "}
-              Con experiencia en tecnologías como React, Node.js, MySQL, y
-              diseño UX/UI con Figma.
+              Experiencia con React, TypeScript, JavaScript, Node.js y MySQL.
             </span>{" "}
-            Autodidacta con enfoque en el aprendizaje continuo y comprometido
-            con el crecimiento colaborativo. Orientado al desarrollo de
-            proyectos de alta calidad que generen un impacto positivo
+            Autodidacta,
+orientado al aprendizaje continuo y al desarrollo de proyectos funcionales y de
+calidad.
           </p>
           <p></p>
         </div>
