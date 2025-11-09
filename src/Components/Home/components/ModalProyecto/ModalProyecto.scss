@@ -23,7 +23,7 @@
   border-radius: 15px;
   padding: 20px;
   padding-right: 12px;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -61,10 +61,9 @@
 }
 
 /* --- Botones del modal (fijos sobre el contenido) --- */
-.modal-cerrar,
 .modal-anterior,
 .modal-siguiente {
-  position: fixed;
+  position: absolute;
   z-index: 10001;
   background: rgba(0, 0, 0, 0.85);
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -82,10 +81,26 @@
   transition: all 0.3s ease;
 }
 
-/* Cerrar (arriba a la derecha) */
+/* Cerrar (arriba a la derecha del modal) */
 .modal-cerrar {
-  top: 30px;
-  right: 30px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10001;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 22px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
 
   &:hover {
     background: rgba(255, 0, 0, 0.9);
@@ -96,7 +111,7 @@
 /* Flechas de navegación */
 .modal-anterior {
   top: 50%;
-  left: 20px;
+  left: 15px;
   transform: translateY(-50%);
 
   &:hover {
@@ -107,7 +122,7 @@
 
 .modal-siguiente {
   top: 50%;
-  right: 20px;
+  right: 15px;
   transform: translateY(-50%);
 
   &:hover {
@@ -199,7 +214,7 @@
     max-width: 95vw;
     padding: 15px;
     padding-right: 10px;
-    padding-top: 25px;
+    padding-top: 20px;
     padding-bottom: 25px;
   }
 
@@ -208,7 +223,6 @@
     margin-bottom: 25px; /* espacio inferior para respetar esquinas redondeadas en móvil */
   }
 
-  .modal-cerrar,
   .modal-anterior,
   .modal-siguiente {
     width: 36px;
@@ -217,16 +231,19 @@
   }
 
   .modal-cerrar {
-    top: 15px;
-    right: 15px;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    top: 10px;
+    right: 10px;
   }
 
   .modal-anterior {
-    left: 10px;
+    left: 8px;
   }
 
   .modal-siguiente {
-    right: 10px;
+    right: 8px;
   }
 
   .modal-info {
