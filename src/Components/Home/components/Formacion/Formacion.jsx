@@ -2,7 +2,9 @@ import { useState } from "react";
 import { PiCertificateDuotone } from "react-icons/pi";
 import { ImLink } from "react-icons/im";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import "../../Home/Home.scss";
+import "./Formacion.scss";
+import "../Proyectos/Proyectos.scss";
+import "../ProyectoCard/ProyectoCard.scss";
 export default function Formacion({ formacion }) {
   const [mostrarTodos, setMostrarTodos] = useState(false);
 

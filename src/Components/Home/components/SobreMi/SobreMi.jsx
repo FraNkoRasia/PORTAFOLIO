@@ -1,5 +1,5 @@
 import { TbUserCheck } from "react-icons/tb";
-import "../../Home/Home.scss";
+import "./SobreMi.scss";
 
 export default function SobreMi() {
   return (

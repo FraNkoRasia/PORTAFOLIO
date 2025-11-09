@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { FaCode, FaChevronDown, FaChevronUp } from "react-icons/fa";
-import ProyectoCard from "./ProyectoCard";
-import ModalProyecto from "./ModalProyecto";
-import "../../Home/Home.scss";
+import ProyectoCard from "../ProyectoCard/ProyectoCard";
+import ModalProyecto from "../ModalProyecto/ModalProyecto";
+import "./Proyectos.scss";
+import "../ProyectoCard/ProyectoCard.scss";
 
 export default function Proyectos({ proyectos }) {
   const [mostrarTodos, setMostrarTodos] = useState(false);

@@ -3,7 +3,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { FaNode, FaReact, FaHtml5, FaCss3Alt, FaFigma, FaGithub } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiPostman, SiMysql } from "react-icons/si";
-import "../../Home/Home.scss";
+import "./Skills.scss";
 
 export default function Skills() {
   return (

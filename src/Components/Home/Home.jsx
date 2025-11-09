@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Header from "./components/Header";
-import Proyectos from "./components/Proyectos";
-import Formacion from "./components/Formacion";
-import Skills from "./components/Skills";
-import SobreMi from "./components/SobreMi";
+import Header from "./components/Header/Header";
+import Proyectos from "./components/Proyectos/Proyectos";
+import Formacion from "./components/Formacion/Formacion";
+import Skills from "./components/Skills/Skills";
+import SobreMi from "./components/SobreMi/SobreMi";
 import "./Home.scss";
 
 export default function Home() {

@@ -1,0 +1,32 @@
+.formacion {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+#skills {
+  margin-bottom: 30px;
+}
+
+.iconos-svg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 50px;
+  gap: 15px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+  color: #d3d3d3;
+  filter: drop-shadow(0px 0px 0px rgb(255, 183, 0));
+}
+
+@media (min-width: 1024px) {
+  .iconos-svg {
+    font-size: 70px;
+  }
+}
+

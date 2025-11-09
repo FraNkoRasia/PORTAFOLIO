@@ -1,0 +1,268 @@
+// Estilos para el modal
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.modal-contenido {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 20px;
+  padding-right: 12px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.8);
+  animation: slideUp 0.3s ease-in-out;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* --- Contenedor de imagen del modal --- */
+.modal-imagen-contenedor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.modal-imagen {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  background: #000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+}
+
+/* --- Botones del modal (fijos sobre el contenido) --- */
+.modal-cerrar,
+.modal-anterior,
+.modal-siguiente {
+  position: fixed;
+  z-index: 10001;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 22px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+/* Cerrar (arriba a la derecha) */
+.modal-cerrar {
+  top: 30px;
+  right: 30px;
+
+  &:hover {
+    background: rgba(255, 0, 0, 0.9);
+    transform: rotate(90deg) scale(1.1);
+  }
+}
+
+/* Flechas de navegación */
+.modal-anterior {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+
+  &:hover {
+    background: rgba(241, 189, 92, 0.95);
+    transform: translateY(-50%) scale(1.1);
+  }
+}
+
+.modal-siguiente {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+
+  &:hover {
+    background: rgba(241, 189, 92, 0.95);
+    transform: translateY(-50%) scale(1.1);
+  }
+}
+
+.modal-indicadores {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .modal-punto {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+
+    &.activo {
+      background-color: #f1bd5c;
+      transform: scale(1.4);
+      box-shadow: 0 0 10px rgba(241, 189, 92, 0.8);
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+      transform: scale(1.2);
+    }
+  }
+}
+
+.modal-info {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+
+  .modal-titulo {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #f1bd5c;
+  }
+
+  .modal-descripcion {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e4e4e4;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsivo - Mobile */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .modal-contenido {
+    max-width: 95vw;
+    padding: 15px;
+    padding-right: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .modal-contenido::-webkit-scrollbar-track {
+    margin-top: 25px; /* espacio superior para respetar esquinas redondeadas en móvil */
+    margin-bottom: 25px; /* espacio inferior para respetar esquinas redondeadas en móvil */
+  }
+
+  .modal-cerrar,
+  .modal-anterior,
+  .modal-siguiente {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .modal-cerrar {
+    top: 15px;
+    right: 15px;
+  }
+
+  .modal-anterior {
+    left: 10px;
+  }
+
+  .modal-siguiente {
+    right: 10px;
+  }
+
+  .modal-info {
+    .modal-titulo {
+      font-size: 22px;
+    }
+
+    .modal-descripcion {
+      font-size: 14px;
+    }
+  }
+}
+
+/* Scrollbar (Chrome, Edge, Safari) */
+.modal-contenido::-webkit-scrollbar {
+  width: 8px; /* barra finita */
+  height: 0;  /* oculta barra horizontal */
+}
+
+.modal-contenido::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 30px; /* espacio superior para respetar esquinas redondeadas */
+  margin-bottom: 30px; /* espacio inferior para respetar esquinas redondeadas */
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.modal-contenido::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease;
+  min-height: 50px; /* asegura que el thumb tenga un tamaño mínimo */
+}
+
+.modal-contenido::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+

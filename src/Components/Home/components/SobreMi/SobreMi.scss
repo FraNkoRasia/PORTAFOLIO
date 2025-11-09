@@ -1,0 +1,57 @@
+.sobremititulo {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.sobremi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+
+  .naranja {
+    color: #f1bd5c;
+    opacity: 0.9;
+    font-weight: 600;
+  }
+
+  .imagensobremi {
+    width: 250px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 70px rgb(0, 0, 207));
+  }
+
+  p {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .sobremi {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    p {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .sobremi {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sobremi {
+    font-size: 20px;
+  }
+}
+

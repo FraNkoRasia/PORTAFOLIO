@@ -1,6 +1,6 @@
 import { ImLink } from "react-icons/im";
 import { TbBrandGithub } from "react-icons/tb";
-import "../../Home/Home.scss";
+import "./ProyectoCard.scss";
 
 export default function ProyectoCard({ proyecto, abrirModal }) {
   const imagenes = proyecto.imagenes || (proyecto.imagen ? [proyecto.imagen] : []);

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import "./ModalProyecto.scss";
 
 export default function ModalProyecto({ proyecto, cerrarModal }) {
   const [imagenActual, setImagenActual] = useState(0);

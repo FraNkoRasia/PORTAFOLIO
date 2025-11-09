@@ -1,0 +1,61 @@
+.experiencia {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.proyectos {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  justify-content: space-around;
+  gap: 15px;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-vermas-vermenos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .ver-mas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    margin: 20px 0;
+    box-shadow: inset 0px 0px 10px rgb(2, 2, 2);
+    background-color: #49a61a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0066ff;
+    }
+
+    .ver-mas-icono {
+      font-size: 18px;
+      animation: bounce 1s infinite;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+

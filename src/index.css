@@ -116,8 +116,7 @@ body {
 }
 
 html,
-body,
-#root {
+body {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
@@ -125,6 +124,8 @@ body,
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
+	width: 100%;
 }
 
 #root {
@@ -132,12 +133,11 @@ body,
 	top: 0;
 	left: 0;
 	height: 100vh;
-	/* Equivalente a h-screen */
-	width: 100vw;
-	/* Equivalente a w-screen */
+	width: 100%;
 	background: radial-gradient(ellipse 60% 100% at 50% -20%,
 			rgba(4, 0, 247, 0.3),
 			rgba(255, 255, 255, 0));
+	overflow-x: hidden;
 }
 
 ol,

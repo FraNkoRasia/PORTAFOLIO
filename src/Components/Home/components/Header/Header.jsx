@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { ImGithub } from "react-icons/im";
 import { GrLinkedin } from "react-icons/gr";
 import { MdOutlineSimCardDownload } from "react-icons/md";
-import "../../Home/Home.scss";
+import "./Header.scss";
 
 export default function Header() {
   const [showCurriculumOptions, setShowCurriculumOptions] = useState(false);

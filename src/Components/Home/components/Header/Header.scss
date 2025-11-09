@@ -1,0 +1,121 @@
+.imagenperfil {
+  margin: 15px 0;
+  width: 100px;
+  border-radius: 100%;
+}
+
+.imagen-titulo {
+  display: flex;
+  align-items: center;
+}
+
+.trabajar {
+  border: 1px solid rgb(76, 92, 113);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 0px 4px rgb(2, 128, 225);
+
+  &:hover {
+    box-shadow: inset 0px 0px 10px rgb(2, 2, 2);
+    background-color: #fcfbf9;
+    color: black;
+  }
+}
+
+.frankorasia {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 15px 0;
+
+  .naranja {
+    color: #f1bd5c;
+  }
+}
+
+.descripcion {
+  font-size: 18px;
+  overflow-wrap: break-word;
+  width: 100%;
+  filter: drop-shadow(0px 0px 0px rgb(201, 201, 201));
+
+  .naranja {
+    color: #f1bd5c;
+    font-weight: 600;
+  }
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px 40px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    flex-wrap: wrap;
+
+    li {
+      border: 1px solid rgb(76, 92, 113);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      box-shadow: 0px 0px 4px rgb(2, 128, 225);
+
+      &:hover {
+        box-shadow: inset 0px 0px 10px rgb(2, 2, 2);
+        background-color: #fcfbf9;
+        color: black;
+      }
+    }
+  }
+
+  .curriculum-options-container {
+    position: relative;
+  }
+
+  .curriculum-options {
+    position: absolute;
+    top: 115%;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(76, 92, 113);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 10;
+
+    a {
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fdfdfd;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ffffff;
+        color: #000000;
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .redes {
+    justify-content: flex-start;
+  }
+}
+
