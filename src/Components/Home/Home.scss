@@ -230,10 +230,30 @@
     }
 
     .descripcion-proyecto {
+      font-size: 16px;
+      line-height: 1.6;
       color: #e4e4e4;
       width: 100%;
       max-width: 600px;
+      text-align: justify;
+      letter-spacing: 0.3px;
+      font-weight: 400;
+      margin-top: 8px;
+      filter: drop-shadow(0 0 0 rgb(201, 201, 201));
+      transition: color 0.3s ease;
+    
+      // Efecto de recorte suave (si querés limitar texto largo)
+      display: -webkit-box;
+      -webkit-line-clamp: 4; // muestra 4 líneas
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    
+      @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 1.5;
+      }
     }
+    
 
     .btn-code-preview {
       display: flex;
@@ -449,96 +469,99 @@
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.8);
   animation: slideUp 0.3s ease-in-out;
 
-  .modal-imagen-contenedor {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    overflow: visible;
-    background: transparent;
+ /* --- Botones del modal (fijos sobre el contenido) --- */
+.modal-cerrar,
+.modal-anterior,
+.modal-siguiente {
+  position: fixed;
+  z-index: 10001;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 22px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+}
 
-    .modal-cerrar {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      background: rgba(0, 0, 0, 0.85);
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      color: #fff;
-      font-size: 22px;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10001;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+/* Cerrar (arriba a la derecha) */
+.modal-cerrar {
+  top: 30px;
+  right: 30px;
 
-      &:hover {
-        background: rgba(255, 0, 0, 0.9);
-        border-color: rgba(255, 255, 255, 0.4);
-        transform: rotate(90deg) scale(1.1);
-      }
-    }
+  &:hover {
+    background: rgba(255, 0, 0, 0.9);
+    transform: rotate(90deg) scale(1.1);
+  }
+}
 
-    .modal-anterior,
-    .modal-siguiente {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.85);
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      color: #fff;
-      font-size: 22px;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10001;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+/* Flechas de navegación */
+.modal-anterior {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
 
-      &:hover {
-        background: rgba(241, 189, 92, 0.95);
-        border-color: rgba(241, 189, 92, 0.6);
-        transform: translateY(-50%) scale(1.15);
-      }
+  &:hover {
+    background: rgba(241, 189, 92, 0.95);
+    transform: translateY(-50%) scale(1.1);
+  }
+}
 
-      &:active {
-        transform: translateY(-50%) scale(1.05);
-      }
-    }
+.modal-siguiente {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
 
-    .modal-anterior {
-      left: -15px;
-    }
+  &:hover {
+    background: rgba(241, 189, 92, 0.95);
+    transform: translateY(-50%) scale(1.1);
+  }
+}
 
-    .modal-siguiente {
-      right: -15px;
-    }
+/* Responsivo */
+@media (max-width: 768px) {
+  .modal-cerrar,
+  .modal-anterior,
+  .modal-siguiente {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
 
-    .modal-imagen {
-      max-width: 100%;
-      max-height: 70vh;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      border-radius: 10px;
-      animation: fadeIn 0.5s ease-in-out;
-      display: block;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
-      background: #000;
-    }
+  .modal-cerrar {
+    top: 15px;
+    right: 15px;
+  }
+
+  .modal-anterior {
+    left: 10px;
+  }
+
+  .modal-siguiente {
+    right: 10px;
+  }
+
+
+   .modal-imagen {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  background: #000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+}
+
   }
 
   .modal-indicadores {
@@ -610,8 +633,8 @@
 
     .modal-imagen-contenedor {
       .modal-cerrar {
-        top: -5px;
-        right: -5px;
+        top: -30px;
+        right: -25px;
         width: 36px;
         height: 36px;
         font-size: 18px;
@@ -619,17 +642,17 @@
 
       .modal-anterior,
       .modal-siguiente {
-        width: 42px;
-        height: 42px;
+        width: 36px;
+        height: 36px;
         font-size: 18px;
       }
 
       .modal-anterior {
-        left: -10px;
+        left: -30px;
       }
 
       .modal-siguiente {
-        right: -10px;
+        right: -30px;
       }
 
       .modal-imagen {
@@ -647,4 +670,35 @@
       }
     }
   }
+}
+.modal-contenido {
+  overflow-y: auto;      /* scroll solo vertical */
+  overflow-x: hidden;    /* evita el scroll horizontal */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  padding-right: 10px;   /* espacio para que el scroll no tape texto */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Scrollbar (Chrome, Edge, Safari) */
+.modal-contenido::-webkit-scrollbar {
+  width: 8px; /* barra finita */
+  height: 0;  /* oculta barra horizontal */
+}
+
+.modal-contenido::-webkit-scrollbar-track {
+  background: transparent;
+  margin-block: 15px; /* evita tocar esquinas redondeadas */
+}
+
+.modal-contenido::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease;
+}
+
+.modal-contenido::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
