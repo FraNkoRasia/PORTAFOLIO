@@ -62,8 +62,8 @@ export default function Header() {
             </button>
             {showCurriculumOptions && (
               <div className="curriculum-options">
-                <a href="/image/CurriculumPdf/Curriculum.pdf" target="_blank" rel="noreferrer">Ver</a>
-                <a href="/image/CurriculumPdf/Curriculum.pdf" download>Descargar</a>
+                <a href="/image/CurriculumPdf/Curriculum2025.pdf" target="_blank" rel="noreferrer">Ver</a>
+                <a href="/image/CurriculumPdf/Curriculum2025.pdf" download>Descargar</a>
               </div>
             )}
           </li>
