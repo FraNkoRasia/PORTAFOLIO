@@ -1,10 +1,12 @@
 import { useState } from "react";
+import PropTypes from "prop-types"; // ✅ Importamos PropTypes
 import { PiCertificateDuotone } from "react-icons/pi";
 import { ImLink } from "react-icons/im";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import "./Formacion.scss";
 import "../Proyectos/Proyectos.scss";
 import "../ProyectoCard/ProyectoCard.scss";
+
 export default function Formacion({ formacion }) {
   const [mostrarTodos, setMostrarTodos] = useState(false);
 
@@ -17,16 +19,22 @@ export default function Formacion({ formacion }) {
 
       <div className="proyectos">
         {formacion
-          .slice(0, mostrarTodos ? formacion.length : 3)
+          .slice(0, mostrarTodos ? formacion.length : 4)
           .map((item) => (
-            <div className="proyect" key={item.id}>
-              <img src={item.imagen} alt={item.institucion} />
+            <article className="proyect" key={item.id}>
+              <img
+                src={item.imagen}
+                alt={item.institucion}
+                loading="lazy"
+              />
+
               <div>
-                <h1 className="titulo-proyecto">{item.institucion}</h1>
+                <h2 className="titulo-proyecto">{item.institucion}</h2>
                 <p className="descripcion-proyecto">{item.descripcion}</p>
               </div>
-              <div className="btn-code-preview">
-                {item.url && (
+
+              {item.url && (
+                <div className="btn-code-preview">
                   <a
                     href={item.url}
                     target="_blank"
@@ -36,15 +44,18 @@ export default function Formacion({ formacion }) {
                       <ImLink /> &nbsp;Certificado
                     </button>
                   </a>
-                )}
-              </div>
-            </div>
+                </div>
+              )}
+            </article>
           ))}
       </div>
 
       {formacion.length > 3 && (
         <div className="btn-vermas-vermenos">
-          <button className="ver-mas" onClick={() => setMostrarTodos((p) => !p)}>
+          <button
+            className="ver-mas"
+            onClick={() => setMostrarTodos((prev) => !prev)}
+          >
             {mostrarTodos ? "Ver menos Certificados" : "Ver más Certificados"}
             {mostrarTodos ? <FaChevronUp /> : <FaChevronDown />}
           </button>
@@ -53,3 +64,16 @@ export default function Formacion({ formacion }) {
     </>
   );
 }
+
+// ✅ Validación de props
+Formacion.propTypes = {
+  formacion: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      imagen: PropTypes.string.isRequired,
+      institucion: PropTypes.string.isRequired,
+      descripcion: PropTypes.string,
+      url: PropTypes.string,
+    })
+  ).isRequired,
+};
