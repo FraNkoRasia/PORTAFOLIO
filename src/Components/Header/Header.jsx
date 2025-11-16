@@ -57,6 +57,16 @@ export default function Header() {
         };
         
         rafId = requestAnimationFrame(checkScroll);
+        
+        // Forzar verificación más frecuente para detectar scroll programático (móviles, flechas, etc.)
+        const intervalId = setInterval(() => {
+            const { currentScroll, isScrolledDown } = checkScrollPosition();
+            if (currentScroll > 50 || isScrolledDown) {
+                applyBackground(true);
+            } else if (currentScroll <= 50) {
+                applyBackground(false);
+            }
+        }, 100);
 
         // Detectar teclas de flecha - solución más directa
         let arrowScrollCount = 0;
@@ -122,6 +132,75 @@ export default function Header() {
             }
         };
 
+        // Detectar scroll táctil para móviles
+        let touchStartY = 0;
+        let touchScrollDelta = 0;
+        
+        const handleTouchStart = (e) => {
+            touchStartY = e.touches[0].clientY;
+            touchScrollDelta = 0;
+        };
+        
+        const handleTouchMove = (e) => {
+            const currentY = e.touches[0].clientY;
+            const deltaY = touchStartY - currentY;
+            touchScrollDelta += Math.abs(deltaY);
+            touchStartY = currentY;
+            
+            // Si el desplazamiento acumulado es mayor a 50px, mostrar fondo
+            if (touchScrollDelta > 50) {
+                applyBackground(true);
+            }
+            
+            // También verificar la posición del scroll actual
+            handleScroll();
+        };
+        
+        const handleTouchEnd = () => {
+            // Verificar la posición final del scroll múltiples veces
+            handleScroll();
+            setTimeout(() => handleScroll(), 50);
+            setTimeout(() => handleScroll(), 150);
+            setTimeout(() => handleScroll(), 300);
+        };
+
+        // Detectar arrastre con mouse (para modo móvil con cursor)
+        let mouseStartY = 0;
+        let mouseScrollDelta = 0;
+        let isMouseDown = false;
+        
+        const handleMouseDown = (e) => {
+            mouseStartY = e.clientY;
+            mouseScrollDelta = 0;
+            isMouseDown = true;
+        };
+        
+        const handleMouseMove = (e) => {
+            if (isMouseDown) {
+                const currentY = e.clientY;
+                const deltaY = mouseStartY - currentY;
+                mouseScrollDelta += Math.abs(deltaY);
+                mouseStartY = currentY;
+                
+                // Si el desplazamiento acumulado es mayor a 50px, mostrar fondo
+                if (mouseScrollDelta > 50) {
+                    applyBackground(true);
+                }
+                
+                // También verificar la posición del scroll actual
+                handleScroll();
+            }
+        };
+        
+        const handleMouseUp = () => {
+            isMouseDown = false;
+            // Verificar la posición final del scroll múltiples veces
+            handleScroll();
+            setTimeout(() => handleScroll(), 50);
+            setTimeout(() => handleScroll(), 150);
+            setTimeout(() => handleScroll(), 300);
+        };
+
         // Verificar estado inicial
         setTimeout(() => {
             handleScroll();
@@ -130,12 +209,25 @@ export default function Header() {
         window.addEventListener('scroll', handleScroll, { passive: true });
         window.addEventListener('wheel', handleWheel, { passive: true });
         window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('touchstart', handleTouchStart, { passive: true });
+        window.addEventListener('touchmove', handleTouchMove, { passive: true });
+        window.addEventListener('touchend', handleTouchEnd, { passive: true });
+        window.addEventListener('mousedown', handleMouseDown);
+        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mouseup', handleMouseUp);
 
         return () => {
             cancelAnimationFrame(rafId);
+            clearInterval(intervalId);
             window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('wheel', handleWheel);
             window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchmove', handleTouchMove);
+            window.removeEventListener('touchend', handleTouchEnd);
+            window.removeEventListener('mousedown', handleMouseDown);
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mouseup', handleMouseUp);
         };
     }, []);
 
