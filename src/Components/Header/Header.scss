@@ -12,12 +12,7 @@
     padding: 10px;
     z-index: 1000;
     transition: background-color 0.3s ease, padding 0.3s ease;
-    background-color: transparent;
-
-    &.header-scrolled {
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 10px;
-    }
+    // background-color se controla desde el componente con estilos inline
 }
 
 nav {
@@ -26,7 +21,7 @@ nav {
     align-items: center;
     border-radius: 15px;
     padding: 10px 20px;
-    background-color: transparent;
+    background-color: transparent !important;
     transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
@@ -39,6 +34,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent !important;
 }
 
 .header-content li {
